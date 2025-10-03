@@ -1,0 +1,4 @@
+# Compiled files
+*.o
+scientific_calculator
+run_tests
