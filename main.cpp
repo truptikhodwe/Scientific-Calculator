@@ -11,7 +11,7 @@ void showMenu() {
     cout << "5. Exit\n";
     cout << "Enter your choice: ";
 }
-// Main loop
+
 int main() {
     int choice;
     double num1, num2;
