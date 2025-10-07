@@ -44,7 +44,7 @@
 pipeline {
     agent any
     environment {
-         DOCKER_USERNAME = "truptikhodwe"
+         DOCKER_USERNAME = "trupti1812"
          DOCKER_CREDENTIALS_ID = "dockerhub-credentials"
     }
     stages {
