@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 #include "calculator.h" // Our functions to test
 
+
 // Test the square root function
 TEST(SquareRootTest, HandlesPositiveNumbers) {
     ASSERT_EQ(squareRoot(4.0), 2.0);
