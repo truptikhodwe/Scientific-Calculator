@@ -1,0 +1,23 @@
+---
+- name: Deploy Scientific Calculator Docker Container
+  hosts: local
+  become: yes # Use 'sudo' for docker commands if needed
+
+  tasks:
+    - name: Pull the latest Docker image from Docker Hub
+      community.docker.docker_image:
+        name: "{{ docker_username }}/scientific-calculator:latest"
+        source: pull
+
+    - name: Stop and remove any existing container to prevent conflicts
+      community.docker.docker_container:
+        name: calculator-app
+        state: absent
+
+    - name: Run the new container
+      community.docker.docker_container:
+        name: calculator-app
+        image: "{{ docker_username }}/scientific-calculator:latest"
+        state: started
+        interactive: yes # Allows you to interact with the menu
+        tty: yes
